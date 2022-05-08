@@ -11,57 +11,178 @@
     <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Bắt đầu với Chemiscare</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .boder-bot{
+            position: relative;
+        }
+        .boder-bot::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border-bottom: 1px solid #fafafa;
+            width: 80%;
+        }
+        .angleNav ul{
+            animation: scale ease-in 0.1s;
+            transform-origin: top right;
+        }
+        @keyframes scale{
+            from{
+                transform: scale(0);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        .angleNav:hover ul{
+            display: flex;
+        }
+        @media screen and (max-width: 1070px){
+            .partFirst{
+                width: 100%;
+            }
+            .partSecond{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 741px) and (max-width: 1070px){
+            .mainTitle{
+                font-size: 100px;
+                line-height: 100px;
+            }
+            
+        }
+        @media screen and (max-width: 740px){
+            .title{
+                padding: 0;
+            }
+            .mainTitle{
+                font-size: 40px;
+                line-height: 44px;
+            }
+            .footer{
+                padding: 0;
+            }
+            .listSocial{
+                display: flex;
+                justify-content: center;
+            }
+            .nameSocial{
+                
+            }
+            .nav{
+                display: none;
+            }
+            .logo{
+                padding: 0;
+            }
+            .angleNav{
+                display: block;
+            }
+            @media screen and (max-width: 320px){
+                
+                .nameSocial{
+                    display: none;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="h-[100vh] bg-[#F6EBDC] flex">
-        <div class="w-[50%] h-full px-[5px] pt-[20px] flex flex-wrap">
-            <ul class="flex justify-center grow">
-                <li class="">
-                    <a href="" class="flex items-center">
-                        <i class="fa-solid fa-atom text-2xl"></i>
-                        <span class="font-bold text-xl">Chemiscare</span>   
-                    </a>
-                </li> 
-                <li class="">
-                    <a class="p-5 hover:text-[#ff4b2b]" href="">
-                        <i class="fa-solid fa-house"></i>
-                        <span class="text-sm">Diễn Đàng</span>   
-                    </a>
-                </li>
-                <li class="">
-                    <a class="p-5 hover:text-[#ff4b2b]" href="">
-                        <i class="fa-solid fa-calendar"></i>
-                        <span class="text-sm">Lịch Thi</span>   
-                    </a>
-                </li>
-                <li class="">
-                    <a class="p-5 hover:text-[#ff4b2b]" href="">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                        <span class="text-sm">Thể Lệ</span>   
-                    </a>
-                </li>
-                <li class="">
-                    <a class="p-5 hover:text-[#ff4b2b]" href="">
-                        <i class="fa-solid fa-circle-question"></i>
-                        <span class="text-sm">Hỏi Đáp</span>   
-                    </a>
-                </li>
-            </ul>
-            <div class="px-[60px] self-center">
-                <h1 class="text-[60px] font-extrabold leading-[70px]">Tăng trình độ hóa học của bạn tại Chemiscare</h1>
+        <div class="w-[50%] h-full px-[5px] pt-[20px] flex flex-wrap partFirst">
+            <div class="flex items-center grow h-[30px] justify-between">
+                <a href="" class="flex items-center px-[20px] logo">
+                    <i class="fa-solid fa-atom text-2xl"></i>
+                    <span class="font-bold text-xl">Chemiscare</span>   
+                </a>
+                <ul class="flex justify-between grow nav">
+                    <li class="">
+                        <a class="p-5 hover:text-[#ff4b2b]" href="">
+                            <i class="fa-solid fa-house"></i>
+                            <span class="text-sm">Diễn Đàng</span>   
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="p-5 hover:text-[#ff4b2b]" href="">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="text-sm">Lịch Thi</span>   
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="p-5 hover:text-[#ff4b2b]" href="">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <span class="text-sm">Thể Lệ</span>   
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="p-5 hover:text-[#ff4b2b]" href="">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <span class="text-sm">Hỏi Đáp</span>   
+                        </a>
+                    </li>
+                </ul>
+                <div class="relative angleNav hidden">
+                    <i class="fa-solid fa-angle-down text-[18px] p-5 pr-0"></i>
+                    <ul class="justify-between grow absolute top-[100%] right-1 flex-col bg-[#f8593d] text-white rounded-[4px] hidden">
+                        <li class="w-[200px]">
+                            <a class="px-5 block py-2 boder-bot" href="">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="text-sm">Diễn Đàng</span>   
+                            </a>
+                        </li>
+                        <li class="w-[200px]">
+                            <a class="px-5 block py-2 boder-bot" href="">
+                                <i class="fa-solid fa-calendar"></i>
+                                <span class="text-sm">Lịch Thi</span>   
+                            </a>
+                        </li>
+                        <li class="w-[200px]">
+                            <a class="px-5 block py-2 boder-bot" href="">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                                <span class="text-sm">Thể Lệ</span>   
+                            </a>
+                        </li>
+                        <li class="w-[200px]">
+                            <a class="px-5 block py-2" href="">
+                                <i class="fa-solid fa-circle-question"></i>
+                                <span class="text-sm">Hỏi Đáp</span>   
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="px-[60px] self-center title">
+                <h1 class="text-[60px] font-extrabold leading-[70px] mainTitle">Tăng trình độ hóa học của bạn tại Chemiscare</h1>
                 <span class="my-5 block">Chemiscare là một diễn đàng và nơi tổ chức các cuộc thi về hóa học, là sự lựa chọn tuyệt vời để giải đáp các thắc mắc và luyện trình độ hóa học cho tất cả các cấp học</span>
                 <a href=""><button class="w-[200px] h-[50px] bg-[#ff4b2b] hover:bg-[#ff5d41] text-white rounded-[30px] font-bold">Bắt Đầu Miễn Phí</button></a>
             </div>
-            <div class="h-[80px] grow bg-[#ECDDCB] mx-[-5px]  flex flex-col px-[60px] self-end">
+            <div class="h-[80px] grow bg-[#ECDDCB] mx-[-5px]  flex flex-col px-[60px] self-end footer">
                 <span class="mt-[6px]">Liên hệ với chúng tôi tại:</span>
-                <span>
-                    <a href="" class="pr-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-facebook"></i>Facebook</a>
-                    <a href="" class="px-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-google-plus"></i>Email</a>
-                    <a href="" class="pl-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-instagram-square"></i>Instagram</a>
+                <span class="listSocial">
+                    <a href="" class="pr-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-facebook"></i>
+                        <span class="nameSocial">
+                            Facebook
+                        </span>
+                    </a>
+                    <a href="" class="px-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-google-plus"></i>
+                        <span class="nameSocial">
+                            Email
+                        </span>
+                    </a>
+                    <a href="" class="pl-5 inline-flex items-center mt-[4px] font-medium"><i class="fa-brands text-[30px] mr-[4px] fa-instagram-square"></i>
+                        <span class="nameSocial">
+                            Instagram
+                        </span>
+                    </a>
                 </span>
             </div>
         </div>
-        <div class="w-[50%] h-full bg-[url(https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=778&q=80)] bg-no-repeat bg-cover">
+        <div class="w-[50%] h-full bg-[url(https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=778&q=80)] bg-no-repeat bg-cover partSecond">
             <span class="float-right p-5">
                 <a href="" class=""><button class="w-[200px] h-[50px] bg-[white] hover:bg-[#f9f9f9] text-#ff4b2b rounded-[30px] font-bold">Bắt Đầu Miễn Phí <i class="fa-solid fa-arrow-right"></i></button></a>
             </span>
