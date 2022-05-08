@@ -26,7 +26,7 @@
             border-bottom: 1px solid #fafafa;
             width: 80%;
         }
-        .angleNav ul{
+        .navIcon ul{
             animation: scale ease-in 0.1s;
             transform-origin: top right;
         }
@@ -38,7 +38,7 @@
                 transform: scale(1);
             }
         }
-        .angleNav:hover ul{
+        .navIcon:hover ul{
             display: flex;
         }
         @media screen and (max-width: 1070px){
@@ -61,8 +61,8 @@
                 padding: 0;
             }
             .mainTitle{
-                font-size: 40px;
-                line-height: 44px;
+                font-size: 50px;
+                line-height: 54px;
             }
             .footer{
                 padding: 0;
@@ -80,11 +80,14 @@
             .logo{
                 padding: 0;
             }
-            .angleNav{
+            .navIcon{
                 display: block;
             }
             @media screen and (max-width: 320px){
-                
+                .mainTitle{
+                    font-size: 40px;
+                    line-height: 44px;
+                }
                 .nameSocial{
                     display: none;
                 }
@@ -126,8 +129,8 @@
                         </a>
                     </li>
                 </ul>
-                <div class="relative angleNav hidden">
-                    <i class="fa-solid fa-angle-down text-[18px] p-5 pr-0 hover:text-[#ff4b2b]"></i>
+                <div class="relative navIcon hidden">
+                    <i class="fa-solid fa-bars text-[18px] p-5 pr-0 hover:text-[#ff4b2b]"></i>
                     <ul class="justify-between grow absolute top-[100%] right-1 flex-col bg-[#f8593d] text-white rounded-[4px] hidden">
                         <li class="w-[200px]">
                             <a class="px-5 block py-2 boder-bot" href="">
