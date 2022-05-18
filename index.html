@@ -48,13 +48,24 @@
             .partSecond{
                 display: none;
             }
+            .logoIcon{
+                font-size: 34px;
+            }
+            .logoName{
+                font-size: 30px;
+            }
         }
         @media screen and (min-width: 741px) and (max-width: 1070px){
             .mainTitle{
                 font-size: 100px;
                 line-height: 100px;
             }
-            
+            .navItemIcon{
+                font-size: 20px;
+            }
+            .navItemName{
+                font-size: 16px;
+            }
         }
         @media screen and (max-width: 740px){
             .title{
@@ -100,60 +111,60 @@
         <div class="w-[50%] h-full px-[5px] pt-[20px] flex flex-wrap partFirst">
             <div class="flex items-center grow h-[30px] justify-between">
                 <a href="" class="flex items-center px-[20px] logo">
-                    <i class="fa-solid fa-atom text-2xl"></i>
-                    <span class="font-bold text-xl">Chemiscare</span>   
+                    <i class="fa-solid fa-atom text-2xl logoIcon"></i>
+                    <span class="font-bold text-xl logoName">Chemiscare</span>   
                 </a>
                 <ul class="flex justify-between grow nav">
                     <li class="">
                         <a class="p-5 hover:text-[#ff4b2b]" href="">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="text-sm">Diễn Đàng</span>   
+                            <i class="fa-solid fa-house navItemIcon"></i>
+                            <span class="text-sm navItemName">Diễn Đàng</span>   
                         </a>
                     </li>
                     <li class="">
                         <a class="p-5 hover:text-[#ff4b2b]" href="">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span class="text-sm">Lịch Thi</span>   
+                            <i class="fa-solid fa-calendar navItemIcon"></i>
+                            <span class="text-sm navItemName">Lịch Thi</span>   
                         </a>
                     </li>
                     <li class="">
                         <a class="p-5 hover:text-[#ff4b2b]" href="">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                            <span class="text-sm">Thể Lệ</span>   
+                            <i class="fa-solid fa-scale-balanced navItemIcon"></i>
+                            <span class="text-sm navItemName">Thể Lệ</span>   
                         </a>
                     </li>
                     <li class="">
                         <a class="p-5 hover:text-[#ff4b2b]" href="">
-                            <i class="fa-solid fa-circle-question"></i>
-                            <span class="text-sm">Hỏi Đáp</span>   
+                            <i class="fa-solid fa-circle-question navItemIcon"></i>
+                            <span class="text-sm navItemName">Hỏi Đáp</span>   
                         </a>
                     </li>
                 </ul>
                 <div class="relative navIcon hidden">
-                    <i class="fa-solid fa-bars text-[18px] p-5 pr-0 hover:text-[#ff4b2b]"></i>
+                    <i class="fa-solid fa-bars text-[30px] p-5 pr-0 hover:text-[#ff4b2b]"></i>
                     <ul class="justify-between grow absolute top-[100%] right-1 flex-col bg-[#f8593d] text-white rounded-[4px] hidden">
                         <li class="w-[200px]">
-                            <a class="px-5 block py-2 boder-bot" href="">
-                                <i class="fa-solid fa-house"></i>
-                                <span class="text-sm">Diễn Đàng</span>   
+                            <a class="px-6 block py-4 boder-bot" href="">
+                                <i class="text-[18px] fa-solid fa-house"></i>
+                                <span class="text-sm text-[16px]">Diễn Đàng</span>   
                             </a>
                         </li>
                         <li class="w-[200px]">
-                            <a class="px-5 block py-2 boder-bot" href="">
-                                <i class="fa-solid fa-calendar"></i>
-                                <span class="text-sm">Lịch Thi</span>   
+                            <a class="px-6 block py-4 boder-bot" href="">
+                                <i class="text-[18px] fa-solid fa-calendar"></i>
+                                <span class="text-sm text-[16px]">Lịch Thi</span>   
                             </a>
                         </li>
                         <li class="w-[200px]">
-                            <a class="px-5 block py-2 boder-bot" href="">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                                <span class="text-sm">Thể Lệ</span>   
+                            <a class="px-6 block py-4 boder-bot" href="">
+                                <i class="text-[18px] fa-solid fa-scale-balanced"></i>
+                                <span class="text-sm text-[16px]">Thể Lệ</span>   
                             </a>
                         </li>
                         <li class="w-[200px]">
-                            <a class="px-5 block py-2" href="">
-                                <i class="fa-solid fa-circle-question"></i>
-                                <span class="text-sm">Hỏi Đáp</span>   
+                            <a class="px-6 block py-4" href="">
+                                <i class="text-[18px] fa-solid fa-circle-question"></i>
+                                <span class="text-sm text-[16px]">Hỏi Đáp</span>   
                             </a>
                         </li>
                     </ul>
